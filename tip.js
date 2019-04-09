@@ -11,7 +11,7 @@ range.ondrag = function(){
 btnCalculate.onclick = function(){
   let theBill = parseFloat(billAmount.value);
   let tip = (theBill * (range.value/100)).toFixed(2);
-  let total = theBill + tip;
-  let out = `<strong>Tip Amount:</strong> $${tip}<br/><strong>Total:</strong> $${total}`;
+  let total = (theBill + parseFloat(tip)).toFixed(2);
+  let out = `<strong>Tip Amount:</strong> $${tip}<br/><strong>Total Bill:</strong> $${total}`;
   resultArea.innerHTML = out;
 }
