@@ -4,17 +4,23 @@
     <meta charset="utf-8">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-    <link href="tip.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
   </head>
   <body>
       <ons-page>
         <ons-toolbar>
-            <div class="center">ToolBar</div>
+            <div class="center">Framework Tip Calculator</div>
         </ons-toolbar>
-
+        <section style="padding: 8px;">
+         <div style="margin-bottom: 20px;"><input class="text-input text-input--material" placeholder="Bill Amount" type="text" style="width:100%" required></div>
+         <div style="margin-bottom: 20px;">  <ons-range style="width: 80%;" value="0" min="0" max="50" step=".5" id="tipRange"></ons-range>
+           <output id="percentOut"></output>
+         </div>
+         <div> <ons-button modifier="large">Calculate Tip</ons-button></div>
+         </section>
       </ons-page>
+  <script src="tip.js"></script>
   </body>
 </html>
